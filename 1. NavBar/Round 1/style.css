@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0px;
+}
+
+.main-header {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header-container {
+  max-width: 1200px;
+  border: 1px solid white;
+}
+
+.logo {
+  background-color: crimson;
+  max-width: 25%;
+}
+
+.logo > img {
+  width: 100%;
+}
+
+.main-nav {
+}
+
+.main-nav > .main-menu {
+  background-color: lightgreen;
+}
+
+.main-nav > .main-menu {
+}
+
+.main-nav > .main-menu > li {
+}
+
+.main-nav > .main-menu > li:hover {
+}
+
+.main-nav > .main-menu > li > a {
+  color: grey;
+}
+
+.main-nav > .main-menu > li > a:hover {
+}

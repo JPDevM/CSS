@@ -4,17 +4,25 @@
 
 > Repite, luego entiende.
 
-## NarvBar
+## Horizontal NarvBar
 
 > Objetivos:
 
-1. Logotipo
+1. Logotipo.
 2. Tiene que tener 4 menús, 2 de ellos con sub menú.
-3. Sub menú oculto por defecto y visible cuando esté activo.
+3. Sub menú (list-item) oculto por defecto y visible cuando esté activo.
 4. Contenido variable para cada menú y submenú.
+5. Burger menu para móbile (solo visible el logo).
 
 ### Tiempos
 
 > Espero mejorar. La primera es para probar.
 
-1.
+1. 
+
+
+
+##### Recursos:
+
+[Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
