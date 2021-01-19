@@ -1,84 +1,71 @@
+* {
+  box-sizing: border-box;
+  /* Para que el padding y border no se sumen al tamaño real de la caja */
+}
+
 body {
   margin: 0px;
 }
 
-.menu {
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.menu .container {
-  background-color: brown;
-}
-
-.menu .container .logo {
-  background-color: #ff00ff54;
-  display: inline-block;
-  width: 20vw;
-  /* margin: 0px;
-  padding: 0px; */
-}
-
-.menu .container .logo img {
-  background-color: #00cc0050;
-  width: 15vw;
-}
-
-.menu .container ul {
-  background-color: #00cc0050;
-  display: inline-block;
-  list-style-type: none;
-  width: 69vw;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
-}
-
-.menu .container ul li {
-  /* justify-content: space-around;
-  float: right;
-  display: inline-block; */
-}
-
-.menu .container ul li a {
-  /* display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none; */
-}
-
-.menu .container ul li a:hover {
-  background-color: #111111;
-}
-
-.menu .container ul li::before {
-  border: 1px solid black;
-}
-
-.sub-menu .container ul {
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
-  background-color: lightgreen;
-  justify-content: space-around;
-}
-
-.sub-menu .container ul li {
-  float: right;
-  display: inline;
-}
-
-.sub-menu .container ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+a {
   text-decoration: none;
 }
 
-.sub-menu .container ul li a:hover {
-  background-color: #111111;
+.main-header {
+  background-color: brown;
 }
 
-.sub-menu .container ul li::before {
-  border: 1px solid black;
+.main-header-container {
+  max-width: 1200px;
+  margin: auto;
+  border: 1px solid #ffffff;
+  display: flex;
+}
+
+.logo {
+  background-color: #00ff0854;
+  width: 26.666%; /* 320px / 1200px */
+}
+
+.logo img {
+  background-color: #00cc0050;
+  width: 100%;
+}
+
+.main-nav {
+  background-color: tomato;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-menu > li {
+  margin-left: 15px;
+}
+
+.main-menu > li > a {
+  color: #ffffff;
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-menu > li > a:hover {
+  color: green;
+} 
+
+.sub-menu {
+  display: none;
 }
