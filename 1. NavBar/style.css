@@ -1,0 +1,84 @@
+body {
+  margin: 0px;
+}
+
+.menu {
+}
+
+.menu .container {
+  background-color: brown;
+}
+
+.menu .container .logo {
+  background-color: #ff00ff54;
+  display: inline-block;
+  width: 20vw;
+  /* margin: 0px;
+  padding: 0px; */
+}
+
+.menu .container .logo img {
+  background-color: #00cc0050;
+  width: 15vw;
+}
+
+.menu .container ul {
+  background-color: #00cc0050;
+  display: inline-block;
+  list-style-type: none;
+  width: 69vw;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.menu .container ul li {
+  /* justify-content: space-around;
+  float: right;
+  display: inline-block; */
+}
+
+.menu .container ul li a {
+  /* display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; */
+}
+
+.menu .container ul li a:hover {
+  background-color: #111111;
+}
+
+.menu .container ul li::before {
+  border: 1px solid black;
+}
+
+.sub-menu .container ul {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: lightgreen;
+  justify-content: space-around;
+}
+
+.sub-menu .container ul li {
+  float: right;
+  display: inline;
+}
+
+.sub-menu .container ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.sub-menu .container ul li a:hover {
+  background-color: #111111;
+}
+
+.sub-menu .container ul li::before {
+  border: 1px solid black;
+}
