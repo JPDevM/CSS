@@ -13,10 +13,8 @@
 3. Sub menú oculto por defecto y visible cuando esté activo.
 4. Contenido variable para cada menú y submenú.
 
-
-
 ### Tiempos
 
 > Espero mejorar. La primera es para probar.
 
-1. 
+1.
