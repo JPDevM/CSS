@@ -4,15 +4,14 @@
 
 > Repite, luego entiende.
 
-## Horizontal NarvBar
+## Horizontal NavBar
 
 > Objetivos:
 
 1. Logotipo.
 2. Tiene que tener 4 menús, 2 de ellos con sub menú.
-3. Sub menú (list-item) oculto por defecto y visible cuando esté activo.
-4. Contenido variable para cada menú y submenú.
-5. Burger menu para móbile (solo visible el logo).
+3. Sub menú (list-item) oculto por defecto y visible cuando esté hover.
+4. Burger menu para móbile (solo visible el logo).
 
 ### Tiempos
 
