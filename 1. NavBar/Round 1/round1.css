@@ -59,9 +59,9 @@ body {
   background-color: grey;
 }
 
-.main-menu > .active {
+.main-menu > li.active {
   color: black;
-  background-color: chartreuse;
+  background-color: chartreuse !important;
 }
 
 .main-menu > li:hover > a {
@@ -117,13 +117,17 @@ body {
   }
 
   .main-nav {
-    /* display: none; */
     position: fixed;
-    left: 0;
+    left: -100%;
     top: 0;
     width: 70vw;
     height: 100vh;
     background-color: rgba(165, 42, 42, 0.6);
+    transition: 0.5s ease-out;
+  }
+
+  .show-nav {
+    left: 0;
   }
 
   .hamburger-icon {
@@ -131,10 +135,29 @@ body {
     width: 50px;
     background: none;
     border: none;
+    overflow: hidden;
   }
 
-  .hamburger-icon img {
+  .hamburger-icon span {
+    display: block;
+    height: 5px;
+    margin-top: 5px;
     width: 100%;
+    background-color: #000000;
+    transition: 320ms ease-in;
+  }
+
+  .hamburger-change span:first-child {
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+  
+  .hamburger-change span:nth-child(2) {
+    transform: translate(100px);
+    opacity: 0;
+  }
+
+  .hamburger-change span:last-child {
+    transform: rotate(45deg) translate(-8px, -8px);
   }
 
   .main-menu {
@@ -142,11 +165,13 @@ body {
     justify-content: center;
   }
 
-  .main-menu > li {
-    height: 10vh;
+  .main-menu > li > a {
+    height: auto;
+    padding: 15px 0;
   }
 
   .main-menu > li:hover .sub-menu {
     position: static;
+    width: 100%;
   }
 }
