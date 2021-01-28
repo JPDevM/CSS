@@ -5,12 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="round1.css" />
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Horizontal Menu</title>
 </head>
-<!-- Start at 19:09 hs -->
-<!-- Pause at 19:31 hs -->
-
-<!-- Start at 12:30 hs -->
 
 <body>
   <header class="main-header">
@@ -42,6 +40,22 @@
     </div>
   </header>
 
+
+  <script>
+    // Add active class to the current menu item (highlight it)
+    var menu = document.getElementsByClassName("main-menu");
+    // console.log(menu[0]);
+    var menuElements = menu[0].children;
+    console.log(menuElements);
+    for (var i = 0; i < menu - menuElements.length; i++) {
+      menuElements[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        console.log(current[i]);
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
 </body>
 
 </html>
