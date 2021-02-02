@@ -1,0 +1,169 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f2f2f2;
+	font-family: sans-serif;
+}
+
+:is(.container02, .container01) p {
+	color: blue;
+}
+/* .container01 p {} */
+
+.container01 {
+	color: darkgreen;
+	font-size: 50px;
+}
+
+.container01 a {
+	text-decoration: none;
+}
+
+.list01 li {
+	border-bottom: solid 1px red;
+	color: burlywood;
+}
+
+/* 
+	Selector descendente
+	div p {} 
+	
+	Selector hijos directos
+	div > p {} Tiene más jerarquía
+
+	Selectores de hermanos
+		a. Adyacentes (seguidos)
+			elemento + elemento {}
+
+		b. Generales
+			elemento ~ elemento {}
+*/
+
+/* Selector de hermanos adyacentes */
+.container01 .list01 + p {
+	background-color: tomato;
+}
+
+/* Selector de hermanos generales */
+.container01 .list01 ~ p {
+	text-shadow: 1px 1px 5px blueviolet;
+}
+
+/* 
+	Selectores de atributos
+		a. de contexto
+			[attr] {}
+		
+		b. específico / exacto
+			[attr=value] {}
+*/
+img {
+	width: 300px;
+	display: block;
+	margin: 100px auto;
+}
+
+[title] {
+	border: 5px solid #000;
+}
+
+[title=logo] {
+	border: 10px dotted burlywood;
+}
+
+/* 
+	Pseudo selectores
+	a. Pseudo-clases
+		elemento:pseudo {}
+
+		a:hover {}
+		a:visited {}
+		
+		element:first-child
+		element:last-child
+
+		element:nth-child(2) --> #2
+		element:nth-child(even) --> pares
+		element:nth-child(odd) --> impares
+		element:nth-child(3n) --> cada 3er elemento
+		element:nth-child(3n + 1) --> cada 3er elemento iniciando en 1
+
+		element:nth-last-child() --> inicia desde el último hijo
+
+		element:nth-of-type() --> por tipo de elemento
+
+		element:nth-last-of-type() --> por tipo de elemento, iniciando desde el último de su tipo
+
+		element:not() --> cualquier elemento que no sea el que pasamos como argumento
+
+		element:empty --> a los elementos que no tengan nada dentro
+	
+	b. Pseudo-elementos
+		elemento::pseudo {}
+
+		p::first-line {}
+		p::first-letter {}
+*/
+
+::selection {
+	background-color: red;
+	color: whitesmoke;
+}
+
+.paragraph::first-line {
+	color: cornflowerblue;
+}
+
+.paragraph::first-letter {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.list02 {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.list02 li {
+	padding: 10px;
+}
+
+.list02 li:nth-child(even) {
+	background-color: teal;
+}
+
+.list02 li:nth-child(odd) {
+	background-color: black;
+	color: white;
+}
+
+.container02 span:nth-of-type(1) {
+	color: red;
+}
+
+.container02 p {
+	padding: 10px;
+	border: 1px solid #000;
+}
+
+/* 
+.container02 p:not(empty) {
+	padding: 10px;
+	border: 1px solid #000;
+}
+*/
+
+.container02 p:empty {
+	display: none;
+}
+
+.container02 :not(p) {
+	text-decoration: line-through;
+}
+
+.container02 p:not(.special) {
+	background-color: orange;
+}
