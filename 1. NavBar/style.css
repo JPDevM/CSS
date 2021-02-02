@@ -1,21 +1,22 @@
 * {
   box-sizing: border-box;
-  /* Para que el padding y border no se sumen al tamaño real de la caja */
-}
-
-body {
-  margin: 0px;
 }
 
 ul,
 ol {
-  margin: 0;
-  padding: 0;
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 a {
   text-decoration: none;
+}
+
+body {
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .main-header {
@@ -23,49 +24,162 @@ a {
 }
 
 .main-header-container {
+  display: flex;
   max-width: 1200px;
   margin: auto;
-  display: flex;
 }
 
 .logo {
-  width: 26.666%; /* 320px / 1200px */
+  max-width: 25%;
 }
 
-.logo img {
+.logo > img {
   width: 100%;
 }
 
 .main-nav {
   flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .main-menu {
+  height: 100%;
   display: flex;
+  flex-direction: row; /* comportamiento default */
   justify-content: flex-end;
+  align-items: stretch; /* solo funciona si es un flex container (display: flex;) */
 }
 
+/* Selector de hijos directos */
 .main-menu > li {
+  background-color: lightgrey;
+  position: relative; /* para que cualquier elemento con position: absolute; se posicione con referencia a este elemento <li> */
+}
+
+.main-menu > li:hover {
+  background-color: grey;
+}
+
+.main-menu > li:hover > a {
+  color: lightgrey;
+}
+
+.main-menu > li.active {
+  background-color: grey;
+}
+
+.main-menu > li.active > a {
+  color: lightgray;
 }
 
 .main-menu > li > a {
   color: grey;
-  font-size: 20px;
   height: 100%;
+  font-size: 20px;
+  margin: 0 10px;
   display: flex;
   align-items: center;
-  padding: 0 15px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.main-menu > li > a:hover {
-  color: lightgrey;
+.sub-menu,
+.hamburger-icon {
+  display: none;
+}
+
+.sub-menu .active {
+  display: block;
+}
+
+.main-menu > li > .sub-menu {
+  display: block; /* indispensable para mostrar de nuevo el sub-menu */
+  position: absolute;
+  width: 250px;
+}
+
+.sub-menu li {
+  background-color: lightgrey;
+  border-bottom: 1px solid grey;
+}
+
+.sub-menu li:hover {
   background-color: grey;
 }
 
-.sub-menu {
-  display: none;
+.sub-menu li:hover a {
+  color: lightgray;
+}
+
+.sub-menu a {
+  display: block;
+  padding: 15px;
+  color: grey;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .logo {
+    width: 60%;
+    max-width: none;
+    margin: auto;
+  }
+
+  .main-nav {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 70vw;
+    height: 100vh;
+    background-color: lightgrey;
+    transition: 0.5s ease-out;
+  }
+
+  .show-nav {
+    left: 0;
+  }
+
+  .hamburger-icon {
+    display: block;
+    width: 50px;
+    background: none;
+    border: none;
+    overflow: hidden;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    height: 5px;
+    margin-top: 5px;
+    width: 100%;
+    background-color: #000000;
+    transition: 320ms ease-in;
+  }
+
+  .hamburger-change span:first-child {
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+
+  .hamburger-change span:nth-child(2) {
+    transform: translate(100px);
+    opacity: 0;
+  }
+
+  .hamburger-change span:last-child {
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  .main-menu {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main-menu > li > a {
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .main-menu > li.active > .sub-menu {
+    /* position: static; */
+    width: 100%;
+    height: auto;
+  }
 }
