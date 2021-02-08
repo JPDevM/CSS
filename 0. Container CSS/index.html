@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>JPDM</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="main-nav">
+      <div class="prev">
+        <a href="#">Prev</a>
+      </div>
+      <div class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="next">
+        <a href="#">Next</a>
+      </div>
+    </nav>
+    <div class="submenu">
+      <section>
+        <p class="tecnology">CSS</p>
+        <ul id="css-menu">
+          <li><a href="#">Pure CSS</a></li>
+          <li><a href="#">SASS</a></li>
+          <li><a href="#">Boostrap</a></li>
+        </ul>
+      </section>
+      <section>
+        <p class="tecnology">JS</p>
+        <ul id="js-menu">
+          <li><a href="#">Pure JS</a></li>
+          <li><a href="#">React.js</a></li>
+          <li><a href="#">Node.js</a></li>
+        </ul>
+      </section>
+      <section>
+        <p>Sección 3</p>
+      </section>
+    </div>
+  </header>
+
+  <content class="content">
+    <p>content</p>
+  </content>
+
+  <footer class="footer">
+    <p>footer</p>
+  </footer>
+
+  <script>
+    // Add active class to the current menu item (highlight it)
+    const menuElements = document.querySelectorAll(".menu");
+
+    menuElements.forEach(function (oneElement) {
+      oneElement.addEventListener('click', function () {
+        menuElements.forEach(function (oneElement) {
+          oneElement.classList.remove('active');
+        })
+        this.classList.add('active');
+      });
+    });
+
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    hamburgerIcon.addEventListener('click', function () {
+      this.classList.toggle('hamburger-change');
+      const mainNav = document.querySelector('.main-nav');
+      mainNav.classList.toggle('show-nav');
+    });
+  </script>
+
+</body>
+
+</html>

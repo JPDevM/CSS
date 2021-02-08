@@ -1,0 +1,140 @@
+/* General settings */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(224, 228, 228);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background: rgb(34, 36, 41);
+  color: rgb(224, 228, 228);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.active {
+  display: block;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* Grid Layout */
+  body {
+    display: grid;
+    grid-template: minmax(400px, auto);
+    grid-template-areas:
+      'header '
+      'content'
+      'footer';
+  }
+
+  /* Header */
+  .header {
+    grid-area: header;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    border-bottom: 1px solid grey;
+  }
+
+  .main-nav > :is(.prev, .menu, .next) {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .main-nav > .prev {
+    width: 100%;
+  }
+
+  .main-nav > .menu {
+    width: 0.25fr;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-nav > .menu > span {
+    border: 2px solid rgb(224, 228, 228);
+    width: 30px;
+    margin: 2px;
+  }
+
+  .main-nav > .next {
+    width: 100%;
+  }
+
+  .main-nav > :is(.prev, .menu, .next) > p {
+    margin: 0px;
+  }
+
+  .submenu {
+    text-align: center;
+  }
+
+  .submenu > section {
+    border-bottom: 1px solid grey;
+  }
+
+  .submenu > section > :is(#css-menu, #js-menu) {
+  }
+
+  .submenu > section > #css-menu {
+  }
+
+  .submenu > section > #js-menu {
+  }
+
+  .submenu > section > :is(#css-menu, #js-menu) a {
+    width: 100%;
+  }
+
+  /* content */
+  .content {
+    grid-area: content;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: cornflowerblue;
+    border: 1px solid orange;
+    grid-area: footer;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  ...;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  ...;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  ...;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  ...;
+}
