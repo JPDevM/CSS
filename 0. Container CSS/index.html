@@ -4,55 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/styleV2.css" />
   <title>JPDM</title>
 </head>
 
 <body>
-  <header class="header">
-    <nav class="main-nav">
-      <div class="prev">
-        <a href="#">Prev</a>
+  <div class="main">
+    <header class="header">
+      <nav class="main-nav">
+        <div class="prev">
+          <a href="#">Prev</a>
+        </div>
+        <div class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="next">
+          <a href="#">Next</a>
+        </div>
+      </nav>
+      <div class="submenu">
+        <section>
+          <p class="tecnology">CSS</p>
+          <ul id="css-menu">
+            <li><a href="#">Pure CSS</a></li>
+            <li><a href="#">SASS</a></li>
+            <li><a href="#">Boostrap</a></li>
+          </ul>
+        </section>
+        <section>
+          <p class="tecnology">JS</p>
+          <ul id="js-menu">
+            <li><a href="#">Pure JS</a></li>
+            <li><a href="#">React.js</a></li>
+            <li><a href="#">Node.js</a></li>
+          </ul>
+        </section>
+        <section>
+          <p>Sección 3</p>
+        </section>
       </div>
-      <div class="menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="next">
-        <a href="#">Next</a>
-      </div>
-    </nav>
-    <div class="submenu">
-      <section>
-        <p class="tecnology">CSS</p>
-        <ul id="css-menu">
-          <li><a href="#">Pure CSS</a></li>
-          <li><a href="#">SASS</a></li>
-          <li><a href="#">Boostrap</a></li>
-        </ul>
-      </section>
-      <section>
-        <p class="tecnology">JS</p>
-        <ul id="js-menu">
-          <li><a href="#">Pure JS</a></li>
-          <li><a href="#">React.js</a></li>
-          <li><a href="#">Node.js</a></li>
-        </ul>
-      </section>
-      <section>
-        <p>Sección 3</p>
-      </section>
-    </div>
-  </header>
-
-  <content class="content">
-    <p>content</p>
-  </content>
-
-  <footer class="footer">
-    <p>footer</p>
-  </footer>
+    </header>
+    
+    <content class="content">
+      <p>content</p>
+    </content>
+    
+    <footer class="footer">
+      <p>footer</p>
+    </footer>
+  </div>
+  
 
   <script>
     // Add active class to the current menu item (highlight it)

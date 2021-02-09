@@ -31,6 +31,7 @@ body {
 @media only screen and (max-width: 600px) {
   /* Grid Layout */
   body {
+    background: orange;
     display: grid;
     grid-template: minmax(400px, auto);
     grid-template-areas:
@@ -121,6 +122,9 @@ body {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  body {
+    background-color: blueviolet;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
