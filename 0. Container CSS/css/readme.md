@@ -13,6 +13,7 @@
 terminar el JS del menú que se muestre el submenu y transforme el btn
 terminar el JS del submenú que se muestre las categorías del JS o CSS
 
+// las etiquetas a las tengo que convertir de linea a bloque
 @ Media
 
 > Sacado de w3school y usado los valores de boostrap
