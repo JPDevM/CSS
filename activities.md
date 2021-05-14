@@ -17,11 +17,3 @@
 
 > Espero mejorar. La primera es para probar.
 
-1. 
-
-
-
-##### Recursos:
-
-[Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-
